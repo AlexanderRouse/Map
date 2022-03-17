@@ -16,7 +16,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     GoogleMap map;
-
+    String sample = "I am a very long string with too many words";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +35,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 , -118.28585527462162);
         map.addMarker(new MarkerOptions().position(village).title("USC Village"));
         LatLng lyonCenter = new LatLng(34.02464874710005, -118.28839680318703);
-        map.addMarker(new MarkerOptions().position(lyonCenter).title("Lyon Center"));
+        map.addMarker(new MarkerOptions().position(lyonCenter).title(sample));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(village, 16f));
     }
 }
