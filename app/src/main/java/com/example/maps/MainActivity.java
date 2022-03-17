@@ -31,9 +31,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(@NonNull GoogleMap googleMap)
     {
         map = googleMap;
-        LatLng usc = new LatLng(34.02528414431285
+        LatLng village = new LatLng(34.02528414431285
                 , -118.28585527462162);
-        map.addMarker(new MarkerOptions().position(usc).title("USC Village"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(usc));
+        map.addMarker(new MarkerOptions().position(village).title("USC Village"));
+        LatLng lyonCenter = new LatLng(34.02464874710005, -118.28839680318703);
+        map.addMarker(new MarkerOptions().position(lyonCenter).title("Lyon Center"));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(village, 16f));
     }
 }
